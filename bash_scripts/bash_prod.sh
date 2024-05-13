@@ -10,7 +10,7 @@
 #SBATCH --mail-user=DEF_EMAIL
 #SBATCH --mail-type=all
 
-CONTAINER="singularity run --nv --bind "/scratch" ${SCRATCH}/github_EmbeddedQD_1.0.sif"
+CONTAINER="singularity exec --nv ${SCRATCH}/github_EmbeddedQD_1.0.sif"
 GMX="${CONTAINER} gmx"
 
 SLURM_PATH=$SLURM_SUBMIT_DIR/slurm-$SLURM_JOB_ID.out
