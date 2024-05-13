@@ -11,8 +11,8 @@
 #SBATCH --mail-type=all
 
 CONTAINER="singularity exec --nv ${SCRATCH}/github_EmbeddedQD_1.0.sif"
-PYTHON2="${CONTAINER} python2"
-PYTHON3="${CONTAINER} python3"
+PYTHON2="${CONTAINER} python2.7"
+PYTHON3="${CONTAINER} python3.10"
 GMX="${CONTAINER} gmx"
 
 SLURM_PATH=$SLURM_SUBMIT_DIR/slurm-$SLURM_JOB_ID.out
