@@ -1,0 +1,14 @@
+#include "martini_v2.3refP_PEO.itp" 
+#include "lipids_martiniv2.0.itp" 
+#include "ions.itp" 
+[ system ]
+; name
+INSANE!
+
+[ molecules ]
+; name  number
+POPC 452
+CHOL 128
+DOTAP 64
+PW          10380
+CL               64

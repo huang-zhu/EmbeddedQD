@@ -1,0 +1,51 @@
+integrator               = md
+dt                       = 0.02 
+nsteps                   = 1250000
+
+nstxout                  = 0   
+nstvout                  = 0
+nstfout                  = 0
+
+nstlog                   = 1000
+nstenergy                = 50000
+nstxout-compressed       = 50000
+
+vdwtype                  = Cut-Off
+cutoff-scheme            = Verlet
+vdw-modifier             = Potential-shift-Verlet
+rvdw                     = 1.1
+verlet-buffer-tolerance  = 0.005 
+nstlist                  = 20
+pbc                      = xyz
+coulombtype              = PME 
+rcoulomb                 = 1.1
+epsilon-r                = 2.5
+fourierspacing           = 0.12
+
+DispCorr                 = No
+
+tcoupl                   = v-rescale
+tc-grps                  = LIPIDS PW_ION
+tau-t                    = 1.0 1.0
+ref-t                    = 300 300
+
+; Pressure coupling:
+pcoupl                   = Berendsen
+pcoupltype               = Semiisotropic
+tau-p                    = 5.0
+compressibility          = 3e-4  3e-4 
+ref-p                    = 1.0  1.0 
+nstpcouple               = 10
+
+; GENERATE VELOCITIES FOR STARTUP RUN:
+gen-vel                  = no ; modified for warmup equilibrations
+gen-temp                 = 300
+gen-seed                 = -1
+
+refcoord-scaling         = all
+
+constraints              = none
+constraint-algorithm     = Lincs
+continuation             = yes ; modified for warmup equilibrations
+lincs-order              = 4
+lincs-warnangle          = 30
