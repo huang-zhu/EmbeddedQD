@@ -130,6 +130,7 @@ outputPath = os.getcwd() + '/md'
 # inputPath = '//wsl.localhost/Ubuntu-20.04/home/huangzhu/github/EmbeddedQD/QD_CSZS_5nm/Native/rep_0/md'
 # outputPath = '//wsl.localhost/Ubuntu-20.04/home/huangzhu/github/EmbeddedQD/QD_CSZS_5nm/Native/rep_0/md'
 
+saving_fig_membraneFits          = True
 saving_fig_vectorRepresentations = True
 saving_fig_radialP2              = True
 saving_fig_segmentalP2           = True
@@ -327,6 +328,12 @@ for line in leg.get_lines():
          
 fig_membraneFits.tight_layout()
 fig_membraneFits.align_ylabels() 
+if saving_fig_membraneFits: fig_membraneFits.savefig(outputPath + '/plot_membraneFits.png', dpi=2400)
+plt.close(saving_fig_membraneFits)
+print('\n=======================================')
+print(' GENERATED MEMBRANE FITS PLOT          ')
+print('=======================================')
+
 #######################################################################################################################################
 #######################################################################################################################################
 
