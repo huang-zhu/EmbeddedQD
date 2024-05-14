@@ -81,7 +81,6 @@ resname POPC
 resname DOTAP
 resname CHOL
 INPUTS
-else 
     elif [[ "$(pwd)" == *"Thick"* ]]; then
         ${GMX} make_ndx -f md/md.gro \
                         -o md/md_dry.ndx << INPUTS
