@@ -32,7 +32,7 @@ ${GMX} grompp -f input_files/md.mdp \
               -n input_files/index.ndx \
               -po md/mdout_md.mdp \
               -o md/md.tpr \
-              -maxwarn 1 -nsteps 1000
+              -maxwarn 1
 ${GMX} mdrun -v -deffnm md/md $MDRUN_FLAGS
 
 if [[ ! -f md/md.gro ]]; then
