@@ -78,7 +78,7 @@ cp -rv ${BASE_PATH}/inputs/nanoparticles/"$NP".* ${inputs}/ # Copy NP GRO and IT
 cp -rv ${BASE_PATH}/inputs/mdp/* ${inputs}/ # Copy MDP
 cp -rv ${BASE_PATH}/inputs/python_scripts/* ${inputs}/ # Copy PY
 cp -rv ${BASE_PATH}/inputs/ff/* ${inputs}/ # Copy necessary force field ITP
-cp -rv ${BASE_PATH}/bash_scripts/* ${rep}/ # Copy bash script
+cp -rv ${BASE_PATH}/bash_scripts/*.sh ${rep}/ # Copy bash script
 
 bilayer_x=$(awk "BEGIN { print 1*$box_length }")
 bilayer_y=$(awk "BEGIN { print 1*$box_length }")
@@ -317,7 +317,7 @@ ${GMX} grompp -f input_files/npt_warmup_1.mdp \
               -n input_files/index.ndx \
               -po npt/mdout_npt_warmup_1.mdp \
               -o npt/npt_warmup_1.tpr \
-              -maxwarn 1 -nsteps 1000
+              -maxwarn 1
 ${GMX} mdrun -v -deffnm npt/npt_warmup_1 $MDRUN_FLAGS
 if [[ ! -f npt/npt_warmup_1.gro ]]; then
     echo "****************************"
@@ -332,7 +332,7 @@ ${GMX} grompp -f input_files/npt_warmup_2.mdp \
               -n input_files/index.ndx \
               -po npt/mdout_npt_warmup_2.mdp \
               -o npt/npt_warmup_2.tpr \
-              -maxwarn 1 -nsteps 1000
+              -maxwarn 1
 ${GMX} mdrun -v -deffnm npt/npt_warmup_2 $MDRUN_FLAGS
 if [[ ! -f npt/npt_warmup_2.gro ]]; then
     echo "****************************"
@@ -347,7 +347,7 @@ ${GMX} grompp -f input_files/npt.mdp \
               -n input_files/index.ndx \
               -po npt/mdout_npt.mdp \
               -o npt/npt.tpr \
-              -maxwarn 1 -nsteps 1000
+              -maxwarn 1
 ${GMX} mdrun -v -deffnm npt/npt $MDRUN_FLAGS
 if [[ ! -f npt/npt.gro ]]; then
     echo "********************************"
