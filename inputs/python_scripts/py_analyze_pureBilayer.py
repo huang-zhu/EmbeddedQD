@@ -36,8 +36,8 @@ outputPath = os.getcwd() + '/md'
 pickling_volumetricDensities = True
 saving_fig_convergence       = True
 
-input_GRO     = inputPath + '/md_dry.gro'
-input_XTC     = inputPath + '/md_dry.xtc'
+input_GRO     = inputPath + '/md.gro'
+input_XTC     = inputPath + '/md.xtc'
 traj          = md.load(input_XTC, top=input_GRO)
 top           = traj.topology
 md_sim_time   = traj.time
