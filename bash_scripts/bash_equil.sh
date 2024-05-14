@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --account=DEF_ACCOUNT
-#SBATCH --time 12:00:00
+#SBATCH --time DEF_TIME
 #SBATCH --partition=gpu
 #SBATCH --nodes=1
 #SBATCH --ntasks=64
