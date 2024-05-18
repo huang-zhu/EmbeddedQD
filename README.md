@@ -27,13 +27,10 @@ singularity pull docker://${CONTAINER_IMAGE}
 
 Clone the GitHub repository.
 ```
-mkdir github
-cd github
-git clone https://github.com/huang-zhu/EmbeddedQD.git
-
-### NOTE: If git is not installed on your computing resource, you can use the container.
 CONTAINER="singularity exec ${SCRATCH}/github_EmbeddedQD_1.0.sif"
 GIT="${CONTAINER} git"
+mkdir github
+cd github
 ${GIT} clone https://github.com/huang-zhu/EmbeddedQD.git
 ```
 
@@ -41,11 +38,13 @@ Inside the ``EmbeddedQD/bash_scripts`` directory you will find SH scripts that w
 
 Start by entering the account you will use to run the simulations and the email where you want email notifications to arrive. Replace ``ACCOUNT NUMBER`` and ``EMAIL`` below with your information (don't delete the single quotes) and run the lines. For this tutorial, we will set a time limit of 5 days (120 hours), but you should change this according to your HPC resource's limits. 
 ```
+DEF_ACCOUNT="Enter your account here"
+DEF_EMAIL="Enter your email here"
 cd EmbeddedQD/bash_scripts
-sed -i s/DEF_ACCOUNT/'ACCOUNT NUMBER'/g bash_equil.sh 
-sed -i s/DEF_ACCOUNT/'ACCOUNT NUMBER'/g bash_prod.sh 
-sed -i s/DEF_EMAIL/'EMAIL'/g bash_equil.sh 
-sed -i s/DEF_EMAIL/'EMAIL'/g bash_prod.sh 
+sed -i s/DEF_ACCOUNT/"$DEF_ACCOUNT"/g bash_equil.sh 
+sed -i s/DEF_ACCOUNT/"$DEF_ACCOUNT"/g bash_prod.sh 
+sed -i s/DEF_EMAIL/"$DEF_EMAIL"/g bash_equil.sh 
+sed -i s/DEF_EMAIL/"$DEF_EMAIL"/g bash_prod.sh 
 sed -i s/DEF_TIME/'120:00:00'/g bash_equil.sh 
 sed -i s/DEF_TIME/'120:00:00'/g bash_prod.sh 
 ```
