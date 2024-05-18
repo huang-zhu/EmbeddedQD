@@ -15,7 +15,7 @@ GMX="${CONTAINER} gmx"
 
 SLURM_PATH=$SLURM_SUBMIT_DIR/slurm-$SLURM_JOB_ID.out
 
-start_analysis=0 # ps
+start_analysis=100000 # ps
 
 OMP_PER_MPI=$SLURM_NTASKS
 MPI=1 #$(($SLURM_NTASKS/$OMP_PER_MPI))
