@@ -1,5 +1,9 @@
 # EmbeddedQD
 
+<p align="center">
+  <img src=https://github.com/huang-zhu/EmbeddedQD/assets/98200265/aadde84b-1242-4c6e-ae1c-249fa62749b9>
+</p>
+
 This Github Repository was created to replicate the methods and results of the classical molecular dynamics simulations from {ARTICLE}. It includes all necessary files:
 -	Coarse-grained models for nanoparticles (GRO and ITP)
 -	Force field topology files
