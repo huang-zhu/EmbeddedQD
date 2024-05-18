@@ -27,10 +27,14 @@ singularity pull docker://${CONTAINER_IMAGE}
 
 Clone the GitHub repository.
 ```
-CONTAINER="singularity exec ${SCRATCH}/github_EmbeddedQD_1.0.sif"
-GIT="${CONTAINER} git"
 mkdir github
 cd github
+git clone https://github.com/huang-zhu/EmbeddedQD.git
+```
+```
+### NOTE: IF YOUR HPC RESOURCE DOES NOT HAVE GIT, YOU CAN USE THE CONTAINER
+CONTAINER="singularity exec ${SCRATCH}/github_EmbeddedQD_1.0.sif"
+GIT="${CONTAINER} git"
 ${GIT} clone https://github.com/huang-zhu/EmbeddedQD.git
 ```
 
