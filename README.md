@@ -76,13 +76,12 @@ CONTAINER="singularity exec ${SCRATCH}/github_EmbeddedQD_1.0.sif"
 PYTHON3="${CONTAINER} python3.10" 
 cd ${SCRATCH}/github/EmbeddedQD/membrane_Native/rep_0
 ${PYTHON3} ../../inputs/python_scripts/py_analyze_pureBilayer.py
-```
-{INSERT PLOT}
-```
 cd ../../membrane_Thick/rep_0
 ${PYTHON3} ../../inputs/python_scripts/py_analyze_pureBilayer.py
 ```
-{INSERT PLOT}
+<p align="center">
+  <img src=https://github.com/huang-zhu/EmbeddedQD/assets/98200265/ae942348-ffc2-4d12-8388-0d8fe07e99f1>
+</p>
 
 You are now ready to analyze the embedded quantum dots simulations. Below, replace ``BILAYER`` with the system you want to analyze. We will start by doing a convergence check by plotting the area per lipid (APL) as a function of time. Do this for both bilayers.
 ```
