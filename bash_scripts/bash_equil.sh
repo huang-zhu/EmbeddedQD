@@ -191,7 +191,7 @@ cd ${rep}
 OMP_PER_MPI=$(($SLURM_NNODES*$SLURM_CPUS_ON_NODE)) # TOTAL NUMBER OF CPUs AVAILABLE
 MPI=1
 export OMP_NUM_THREADS=$OMP_PER_MPI
-MDRUN_FLAGS="-ntmpi $MPI -ntomp $OMP_PER_MPI"
+MDRUN_FLAGS="-ntmpi $MPI -ntomp $OMP_NUM_THREADS"
 ##############################################################
 ##### ENERGY MINIMIZATION
 ##############################################################
@@ -301,10 +301,10 @@ INPUTS
 fi
 ##############################################################
 
-OMP_PER_MPI=2
-MPI=$(($SLURM_NTASKS/$OMP_PER_MPI))
+OMP_PER_MPI=$SLURM_NTASKS
+MPI=1 #$(($SLURM_NTASKS/$OMP_PER_MPI))
 export OMP_NUM_THREADS=$OMP_PER_MPI
-MDRUN_FLAGS="-ntmpi $MPI -ntomp $OMP_PER_MPI -nb gpu -bonded gpu -update cpu -pme cpu -pmefft cpu -pin on -pinstride 1"
+MDRUN_FLAGS="-ntmpi $MPI -ntomp $OMP_NUM_THREADS -nb gpu -bonded gpu -update cpu -pme gpu -pmefft gpu -pin on -pinstride 1"
 ##############################################################
 ##### NPT
 ##############################################################
