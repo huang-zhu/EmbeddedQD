@@ -83,7 +83,7 @@ ${PYTHON3} ../../inputs/python_scripts/py_analyze_pureBilayer.py
   <img src=https://github.com/huang-zhu/EmbeddedQD/assets/98200265/ae942348-ffc2-4d12-8388-0d8fe07e99f1>
 </p>
 
-You are now ready to analyze the embedded quantum dots simulations. Below, replace ``BILAYER`` with the system you want to analyze. You will start by doing a convergence check by plotting the area per lipid (APL) as a function of time. Do this for both bilayers.
+You are now ready to analyze the embedded quantum dots simulations. You will start by doing a convergence check by plotting the area per lipid (APL) as a function of time for both bilayers.
 ```
 cd ${SCRATCH}/github/EmbeddedQD/QD_CSZS_5nm/Native/rep_0
 ${PYTHON3} ../../../inputs/python_scripts/py_analyze_embeddedConvergence.py
