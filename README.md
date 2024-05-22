@@ -124,7 +124,7 @@ ${PYTHON3} ../../../inputs/python_scripts/py_analyze_embeddedOrdering.py
 {INSERT PLOT}
 ```
 cd ../../Thick/rep_0
-${PYTHON3} ../../../inputs/python_scripts/py_analyze_embeddedConvergence.py
+${PYTHON3} ../../../inputs/python_scripts/py_analyze_embeddedOrdering.py
 ```
 {INSERT PLOT}
 {INSERT PLOT} {INSERT PLOT}
