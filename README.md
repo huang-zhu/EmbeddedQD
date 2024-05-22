@@ -85,11 +85,15 @@ ${PYTHON3} ../../inputs/python_scripts/py_analyze_pureBilayer.py
 
 You are now ready to analyze the embedded quantum dots simulations. Below, replace ``BILAYER`` with the system you want to analyze. You will start by doing a convergence check by plotting the area per lipid (APL) as a function of time. Do this for both bilayers.
 ```
-REP_DIR=${SCRATCH}/github/EmbeddedQD/QD_CSZS_5nm/"BILAYER"/rep_0
-cd ${REP_DIR}
+cd ${SCRATCH}/github/EmbeddedQD/QD_CSZS_5nm/Native/rep_0
 ${PYTHON3} ../../../inputs/python_scripts/py_analyze_embeddedConvergence.py
 ```
-{INSERT PLOT} {INSERT PLOT}
+{INSERT PLOT} 
+```
+cd ${SCRATCH}/github/EmbeddedQD/QD_CSZS_5nm/Thick/rep_0
+${PYTHON3} ../../../inputs/python_scripts/py_analyze_embeddedConvergence.py
+```
+{INSERT PLOT}
 
 You can see that both simulations converge at around 100 ns. You can then proceed with analyzing the lipid aggregation around the embedded quantum dots. 
 
@@ -101,7 +105,7 @@ ${PYTHON3} ../../../inputs/python_scripts/py_analyze_embeddedAggregation.py
 {INSERT PLOT} {INSERT PLOT}
 ```
 cd ../../Thick/rep_0
-${PYTHON3} ../../../inputs/python_scripts/py_analyze_embeddedConvergence.py
+${PYTHON3} ../../../inputs/python_scripts/py_analyze_embeddedAggregation.py
 ```
 {INSERT PLOT} {INSERT PLOT}
 
