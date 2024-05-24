@@ -80,20 +80,19 @@ cd ../../membrane_Thick/rep_0
 ${PYTHON3} ../../inputs/python_scripts/py_analyze_pureBilayer.py
 ```
 <p align="center">
-  <img src=https://github.com/huang-zhu/EmbeddedQD/assets/98200265/ae942348-ffc2-4d12-8388-0d8fe07e99f1>
+  <img width="600" src=https://github.com/huang-zhu/EmbeddedQD/assets/98200265/ae942348-ffc2-4d12-8388-0d8fe07e99f1>
 </p>
 
 You are now ready to analyze the embedded quantum dots simulations. You will start by doing a convergence check by plotting the area per lipid (APL) as a function of time for both bilayers.
 ```
 cd ${SCRATCH}/github/EmbeddedQD/QD_CSZS_5nm/Native/rep_0
 ${PYTHON3} ../../../inputs/python_scripts/py_analyze_embeddedConvergence.py
-```
-{INSERT PLOT} 
-```
 cd ${SCRATCH}/github/EmbeddedQD/QD_CSZS_5nm/Thick/rep_0
 ${PYTHON3} ../../../inputs/python_scripts/py_analyze_embeddedConvergence.py
 ```
-{INSERT PLOT}
+<p align="center">
+  <img width="600" src=https://github.com/huang-zhu/EmbeddedQD/assets/98200265/074d856f-a534-4181-819a-bac1e5d82abd>
+</p>
 
 You can see that both simulations converge at around 100 ns. You can then proceed with analyzing the lipid aggregation around the embedded quantum dots. 
 
@@ -101,13 +100,17 @@ These next scripts will assume that trajectory analysis will begin at 100 ns. If
 ```
 cd ${SCRATCH}/github/EmbeddedQD/QD_CSZS_5nm/Native/rep_0
 ${PYTHON3} ../../../inputs/python_scripts/py_analyze_embeddedAggregation.py
-```
-{INSERT PLOT} {INSERT PLOT}
-```
 cd ../../Thick/rep_0
 ${PYTHON3} ../../../inputs/python_scripts/py_analyze_embeddedAggregation.py
 ```
-{INSERT PLOT} {INSERT PLOT}
+
+<p align="center">
+  <img width="600" src=https://github.com/huang-zhu/EmbeddedQD/assets/98200265/6b7ea5cc-c84e-4008-940c-4abbdde61c1a>
+</p>
+
+<p align="center">
+  <img width="600" src=https://github.com/huang-zhu/EmbeddedQD/assets/98200265/ac9386dc-8911-46e1-8700-98942036be7c>
+</p>
 
 You can see that POPC enriched at the nanoparticle-membrane interface in the Native membrane. In the Thick membrane you can see that PC24 becomes enriched at this interface, displacing the POPC. Now that you have analyzed the aggregation in both cases, you can analyze lipid tail ordering along the membrane.
 
@@ -117,22 +120,27 @@ This data will not be stored as a pickle file, but you can easily implement pick
 ```
 cd ${SCRATCH}/github/EmbeddedQD/QD_CSZS_5nm/Native/rep_0
 ${PYTHON3} ../../../inputs/python_scripts/py_analyze_embeddedOrdering.py
-```
-{INSERT PLOT}
-{INSERT PLOT} {INSERT PLOT}
-{INSERT PLOT}
-{INSERT PLOT}
-```
 cd ../../Thick/rep_0
 ${PYTHON3} ../../../inputs/python_scripts/py_analyze_embeddedOrdering.py
 ```
-{INSERT PLOT}
-{INSERT PLOT} {INSERT PLOT}
-{INSERT PLOT} {INSERT PLOT}
-{INSERT PLOT}
-{INSERT PLOT}
+<p align="center">
+  <img width="600" src=https://github.com/huang-zhu/EmbeddedQD/assets/98200265/99562d47-67a4-47c3-85a5-f0533c8fba9e>
+</p>
 
+You can see that the membranes are well fit.
 
+<p align="center">
+  <img width="600" src=https://github.com/huang-zhu/EmbeddedQD/assets/98200265/7a060822-35e7-43a8-8d00-2c8d4ccd4dd0>
+</p>
 
+The ($P{_2}$) order analyses, show that POPC possesses a higher order at ($D{_r}$) corresponding to the nanoparticle-membrane interface. Furthermore, the segmental ($P{_2}$) shows that the lipids at the interface exhibit a lower order in comparison to the lipids in the bulk membrane.
+
+In contrast, the data for the Thick membrane shows that PC24 is more ordered at ($D{_r}$) corresponding to the nanoparticle-membrane interface. While POPC shows a decreased order at the interface when compared to lipids in the bulk, PC24 lipids at the interface and the bulk show minimal difference between interfacial and bulk lipids. 
+
+<p align="center">
+  <img width="800" src=https://github.com/huang-zhu/EmbeddedQD/assets/98200265/965479e4-1127-4a92-971e-ce4015beabcf>
+</p>
+
+Plotting vectors normal to the membrane fits and molucular vectors of certain lipids at certain distances from the nanoparticle shows that fitting the membrane using 2D data allows for appropriate lipid tail order analyses.
 
 
