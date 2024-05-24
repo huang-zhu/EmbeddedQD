@@ -114,7 +114,7 @@ ${PYTHON3} ../../../inputs/python_scripts/py_analyze_embeddedAggregation.py
 
 You can see that POPC enriched at the nanoparticle-membrane interface in the Native membrane. In the Thick membrane you can see that PC24 becomes enriched at this interface, displacing the POPC. Now that you have analyzed the aggregation in both cases, you can analyze lipid tail ordering along the membrane.
 
-For this analysis, each leaflet will be fitted with non-linear regressions as described in the supplementary information of the article. A plot will be generated showing these regressions and the 2D vectors normal to the membrane fits. Afterwards, the lipid tail order ($P{_2}$) will be quantified as a function of the lipid radial distance from the center of the embedded quantum dot using the local normal vectors computed from the membrane fits. Additionally, the segmental $P{_2}$  will also be plotted for both tails of lipids found at the nanoparticle-membrane interface and in the bulk (refer the main article for details). 
+For this analysis, each leaflet will be fitted with non-linear regressions as described in the supplementary information of the article. A plot will be generated showing these regressions and the 2D vectors normal to the membrane fits. Afterwards, the lipid tail order $P{_2}$ will be quantified as a function of the lipid radial distance from the center of the embedded quantum dot using the local normal vectors computed from the membrane fits. Additionally, the segmental $P{_2}$  will also be plotted for both tails of lipids found at the nanoparticle-membrane interface and in the bulk (refer the main article for details). 
 
 This data will not be stored as a pickle file, but you can easily implement pickle saves (take a look at the previous analysis scripts). Furthermore, a series of plots will be generated to show (A) 3D vectors normal to the membrane with the nanoparticle shell and (B) 3D molecular vectors of lipids with their lipid tails. These plots are generated only for some lipids at some radial distances, and only if lipids are present in the bin of the last frame (i.e., radial distance of 0.375 nm may or may not yield plots). The lipid indices for the plotted lipid tails are also saved on a text file for visualization. 
 ```
@@ -133,9 +133,9 @@ You can see that the membranes are well fit.
   <img width="600" src=https://github.com/huang-zhu/EmbeddedQD/assets/98200265/7a060822-35e7-43a8-8d00-2c8d4ccd4dd0>
 </p>
 
-The ($P{_2}$) order analyses, show that POPC possesses a higher order at ($D{_r}$) corresponding to the nanoparticle-membrane interface. Furthermore, the segmental ($P{_2}$) shows that the lipids at the interface exhibit a lower order in comparison to the lipids in the bulk membrane.
+The $P{_2}$ order analyses, show that POPC possesses a higher order at $D{_r}$ corresponding to the nanoparticle-membrane interface. Furthermore, the segmental $P{_2}$ shows that the lipids at the interface exhibit a lower order in comparison to the lipids in the bulk membrane.
 
-In contrast, the data for the Thick membrane shows that PC24 is more ordered at ($D{_r}$) corresponding to the nanoparticle-membrane interface. While POPC shows a decreased order at the interface when compared to lipids in the bulk, PC24 lipids at the interface and the bulk show minimal difference between interfacial and bulk lipids. 
+In contrast, the data for the Thick membrane shows that PC24 is more ordered at $D{_r}$ corresponding to the nanoparticle-membrane interface. While POPC shows a decreased order at the interface when compared to lipids in the bulk, PC24 lipids at the interface and the bulk show minimal difference between interfacial and bulk lipids. 
 
 <p align="center">
   <img width="800" src=https://github.com/huang-zhu/EmbeddedQD/assets/98200265/965479e4-1127-4a92-971e-ce4015beabcf>
