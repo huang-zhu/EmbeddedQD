@@ -7,7 +7,10 @@
 
 [<img src="https://img.shields.io/badge/DOI-10.1021%2Facs.langmuir.3c03471-blue">](https://doi.org/10.1021/acs.langmuir.3c03471)
 
-This Github Repository was created to replicate the methods and results of the classical molecular dynamics simulations from this article. It includes all necessary files:
+This Github Repository was created to closely reproduce the methods and results of the classical molecular dynamics simulations of:
+Adan Marzouq, Lion Morgenstein, Carlos A. Huang-Zhu, Shimon Yudovich, Ayelet Atkins, Asaf Grupi, Reid C. Van Lehn, and Shimon Weiss. Long-Chain Lipids Facilitate Insertion of Large Nanoparticles into Membranes of Small Unilamellar Vesicles. ACS Langmuir, 40, 10477-10485 (2024).
+
+It includes all necessary files:
 -	Coarse-grained models for nanoparticles (GRO and ITP)
 -	Force field topology files
 -	MDP files
