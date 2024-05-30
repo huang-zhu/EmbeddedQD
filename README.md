@@ -1,10 +1,13 @@
-# EmbeddedQD
 
 <p align="center">
   <img src=https://github.com/huang-zhu/EmbeddedQD/assets/98200265/aadde84b-1242-4c6e-ae1c-249fa62749b9>
 </p>
 
-This Github Repository was created to replicate the methods and results of the classical molecular dynamics simulations from {ARTICLE}. It includes all necessary files:
+# Long-Chain Lipids Facilitate Insertion of Large Nanoparticles into Membranes of Small Unilamellar Vesicles
+
+[<img src="https://img.shields.io/badge/DOI-10.1021%2Facs.langmuir.3c03471-blue">](https://doi.org/10.1021/acs.langmuir.3c03471)
+
+This Github Repository was created to replicate the methods and results of the classical molecular dynamics simulations from this article. It includes all necessary files:
 -	Coarse-grained models for nanoparticles (GRO and ITP)
 -	Force field topology files
 -	MDP files
