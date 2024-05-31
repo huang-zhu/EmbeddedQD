@@ -20,8 +20,10 @@ It includes all necessary files:
 -	Python scripts for analyses and plotting
 -	Bash scripts for running system preparation and simulations
 -	Link to a Docker Container that contains the necessary software to run the simulations and perform the analyses
-These are very large systems (400,000 – 700,000 coarse-grained beads) so the use of high-performance computing (HPC) resources is strongly suggested. 
-The example shown below will follow the smallest system (5 nm QD) for the purpose of this tutorial. In this case, ``Singularity``/``Apptainer`` will be used due to software availability on the HPC resource used. {CREDIT TO TAMU FASTER/ACCESS}. The tutorial assumes you will be running this on an HPC resource with an NVIDIA GPU (for CUDA acceleration) using the ``slurm`` and that you have access to a ``/scratch`` directory.
+-	
+These are very large systems (400,000 – 700,000 coarse-grained beads) so the use of high-performance computing (HPC) resources is strongly suggested. The example shown below will follow the smallest system (5 nm QD) for the purpose of this tutorial. In this case, ``Singularity``/``Apptainer`` will be used due to software availability on the HPC resource used. This tutorial assumes you will be running this on an HPC resource with an NVIDIA GPU (for CUDA acceleration) using the ``slurm`` and that you have access to a ``/scratch`` directory.
+
+ Resources used for this tutorial were provided by the Advanced Cyberinfrastructure Coordination Ecosystem: Services & Support (ACCESS) through an Explore allocation, which is supported by the National Science Foundation under Grant No. 2138307. 
 
 ## SET-UP
 Pull the Docker container.
